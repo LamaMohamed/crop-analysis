@@ -1,0 +1,12 @@
+.mat-toolbar.mat-primary { background: #836539; color: #ffa30edc; }
+.logo{
+    width: 100px;
+    height:100%;
+    
+}
+ .login{
+     cursor: pointer;
+     color: black;
+ }.login:hover{
+   color:rgb(104, 104, 104)
+ }
