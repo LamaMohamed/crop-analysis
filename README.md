@@ -10,15 +10,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * [Angular JS](https://angularjs.org/);
 * [Node JS](https://nodejs.org/);
 
-## Running Locally
-
-Make sure you have [Node.js](http://nodejs.org/) installed.
 
 Other tools and technologies used:
 * [Angular CLI](https://cli.angular.io): frontend scaffolding
 * [Angular Material](https://material.angular.io/): material design components
 * [JSON Web Token](https://jwt.io): user authentication
 * [Bcrypt.js](https://github.com/dcodeIO/bcrypt.js): password encryption
+
+## Running Locally
+
+Make sure you have [Node.js](http://nodejs.org/) installed.
 
 ## Prerequisites
 1. Install [Node.js](https://nodejs.org) and [MongoDB](https://www.mongodb.com)
