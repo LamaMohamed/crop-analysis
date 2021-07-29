@@ -7,8 +7,9 @@ import { AuthUser } from "./auth-user.model";
 
 @Injectable({ providedIn: "root" })
 export class AuthService {
+  endpoint: string = 'http://localhost:3000/api/user';
   private isAuthenticated = false;
-  private token?: string;
+  private token: string | undefined;
   private tokenTimer: any;
   private authStatusListener = new Subject<boolean>();
 
@@ -29,7 +30,7 @@ export class AuthService {
   createUser(username: string, password: string) {
     const authData: AuthUser = { username: username, password: password };
     this.http
-      .post("http://localhost:3000/api/user/signup", authData)
+      .post(`${this.endpoint}/signup`, authData)
       .subscribe(response => {
         console.log(response);
       });
@@ -39,7 +40,7 @@ export class AuthService {
     const authData: AuthUser = { username: username, password: password };
     this.http
       .post<{ token: string; expiresIn: number }>(
-        "http://localhost:3000/api/user/login",
+        `${this.endpoint}/login`,
         authData
       )
       .subscribe(response => {
