@@ -11,6 +11,7 @@ import { LoginComponent } from './_auth/login/login.component';
 import { SignupComponent } from './_auth/signup/signup.component';
 import { HeaderComponent } from './_shared/header/header.component';
 import { AuthInterceptor } from './_auth/auth-interceptor';
+import { SidenavComponent } from './_shared/sidenav/sidenav.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AuthInterceptor } from './_auth/auth-interceptor';
     AppComponent,
     LoginComponent,
     SignupComponent,
-    HeaderComponent
+    HeaderComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,

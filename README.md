@@ -1,7 +1,18 @@
-# CropAnalysis
+# MEAN Stack Crop Analysis
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
 
+## Stack of technologies
+<img align="right" src="./src/assets/images/MEAN_Stack.png" alt="MEAN Stack" height="150px">
+
+* [Mongo DB](https://www.mongodb.org/);
+* [Express JS](http://expressjs.com/);
+* [Angular JS](https://angularjs.org/);
+* [Node JS](https://nodejs.org/);
+
+## Running Locally
+
+Make sure you have [Node.js](http://nodejs.org/) installed.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
