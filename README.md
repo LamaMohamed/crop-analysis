@@ -21,6 +21,16 @@ Other tools and technologies used:
 
 Make sure you have [Node.js](http://nodejs.org/) installed.
 
+### Running Front end
+ In root directory
+ npm install
+ ng serve
+ ### Running back end
+  cd server
+  npm install
+  nodemon app.js
+
+
 ## Prerequisites
 1. Install [Node.js](https://nodejs.org) and [MongoDB](https://www.mongodb.com)
 2. Install Angular CLI: `npm i -g @angular/cli`

@@ -6,7 +6,10 @@
         <mat-error *ngIf="usernameInput.invalid">Please enter a valid username</mat-error>
       </mat-form-field>
       <mat-form-field>
-        <input type="password" name="password" ngModel matInput placeholder="password" #passwordInput="ngModel" required>
+        <input  [type]="hide ? 'password' : 'text'" name="password" ngModel matInput placeholder="password" #passwordInput="ngModel" required>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
         <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error>
       </mat-form-field>
       <button mat-raised-button color="warn" type="submit" *ngIf="!isLoading">Sign up</button>
