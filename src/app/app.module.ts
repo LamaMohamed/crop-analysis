@@ -14,6 +14,7 @@ import { AuthInterceptor } from './_auth/auth-interceptor';
 import { SidenavComponent } from './_shared/sidenav/sidenav.component';
 import { HarvestAddComponent } from './components/harvest-add/harvest-add.component';
 import { HarvestViewComponent } from './components/harvest-view/harvest-view.component';
+import { StatisticsComponent } from './components/statistics/statistics.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HarvestViewComponent } from './components/harvest-view/harvest-view.com
     HeaderComponent,
     SidenavComponent,
     HarvestAddComponent,
-    HarvestViewComponent
+    HarvestViewComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,

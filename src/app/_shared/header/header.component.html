@@ -4,8 +4,7 @@
     <span class="nav-tool-items">
     <mat-icon (click)="sidenav.toggle()" class="hamburger">menu</mat-icon>
   </span>
-    <a class="nav-item nav-link login"  style="color: white;" routerLink="/login">Login</a>
-    <!-- <a class="nav-item nav-link login"  style="color: white;" > Logout</a> -->
+    <a class="nav-item nav-link login" *ngIf="!userIsAutenticated" style="color: white;cursor: pointer;text-decoration: none;" routerLink="/login">Login</a>
+   <a class="nav-item nav-link login" *ngIf="userIsAutenticated" style="color: white;cursor: pointer;text-decoration: none;" (click)='onLogout()' > Logout</a> 
   </mat-toolbar>
 
-  <app-sidenav></app-sidenav>
