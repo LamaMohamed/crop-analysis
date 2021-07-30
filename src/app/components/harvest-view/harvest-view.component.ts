@@ -38,13 +38,7 @@ export class HarvestViewComponent implements OnInit {
         })
       })
       this.HarvestData = data;
-      for(let i=0;i<this.HarvestData.length;i++){
-        for(let j=0;j<this.CityData.length;j++)
-         if(this.HarvestData[i].city == this.CityData[j]._id ){
-                this.HarvestData.city= this.CityData[j].name
-                console.log("hiiii")
-         }
-       }
+    
       console.log(this.HarvestData)
       this.dataSource = new MatTableDataSource<Harvest>(this.HarvestData);
       setTimeout(() => {
