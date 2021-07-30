@@ -21,7 +21,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
    imports: [
@@ -45,7 +46,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
       MatChipsModule,
       MatTooltipModule,
       MatTableModule,
-      MatPaginatorModule
+      MatPaginatorModule,
+      MatCheckboxModule,
+      MatSortModule
    ],
    exports: [
       MatCardModule,
@@ -66,7 +69,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
       MatChipsModule,
       MatTooltipModule,
       MatTableModule,
-      MatPaginatorModule
+      MatPaginatorModule,
+      MatCheckboxModule,
+      MatSortModule
+
    ],
    providers: [
       MatDatepickerModule,

@@ -1,1 +1,21 @@
-<p>sidenav works!</p>
+<mat-sidenav-container > 
+    <!-- Sidenav -->
+    <mat-sidenav [mode]="isBiggerScreen() ? 'over' : 'side'"  #sidenav [(opened)]="opened" [fixedInViewport]="true"
+      [fixedTopGap] style="background-color:white;">
+      <mat-nav-list >
+      
+        <a mat-list-item routerLinkActive="active" routerLink="/harvest-view">
+          <mat-icon>format_list_bulleted</mat-icon> Harvest
+        </a>
+        <a mat-list-item routerLinkActive="active" routerLink="/hotel-list">
+          <mat-icon>format_list_bulleted</mat-icon> Statistics
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <!-- Main content -->
+    <mat-sidenav-content class="scroll" style="background-color: white;">
+      <router-outlet></router-outlet>
+       <img style="background-size: cover;background-size: 100%;" src="	https://myharvestfarms.com/wp-content/uploads/2018/10/homesec.png"> 
+    </mat-sidenav-content>
+  </mat-sidenav-container>

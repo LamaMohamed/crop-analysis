@@ -1,0 +1,64 @@
+<!-- Title group  -->
+<div class="title-group">
+    <h1 class="mat-h1">Add Harvest</h1>
+    <mat-divider fxFlex="1 0"></mat-divider>
+  </div>
+   
+  <!-- Form -->
+  <div class="inner-wrapper">
+    <form [formGroup]="harvestForm" (ngSubmit)="submitHarvestForm()" #resetHarvestForm="ngForm" novalidate>
+      
+      <!-- Left block -->
+      <mat-card>
+        <div class="controlers-wrapper">
+          <!-- Season --> 
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Harvest season" formControlName="season">
+            <mat-error *ngIf="handleError('season', 'required')">
+              You must provide a <strong> season</strong>
+            </mat-error>
+          </mat-form-field>
+
+            <!-- Year --> 
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Harvest year" formControlName="year">
+            <mat-error *ngIf="handleError('year', 'required')">
+              You must provide a <strong> year</strong>
+            </mat-error>
+          </mat-form-field>
+
+            <div class="misc-bottom-padding">
+              <mat-label class="label">Crops:</mat-label>
+              <section *ngFor="let features of CropData" > 
+                  <mat-checkbox [value]="features._id"  (change)="changeOutputCrops($event)">{{features.name}}</mat-checkbox>
+              </section>
+            </div>
+            
+          </div>
+        </mat-card>
+
+        <mat-card>
+          <div class="controlers-wrapper">
+             
+              <div class="misc-bottom-padding">
+                <mat-label class="label">City:</mat-label>
+                <mat-radio-group  aria-label="Select an option" formControlName="city">
+                  <mat-radio-button class = "tp-radio-button"  *ngFor="let feature of CityData" [value]="feature._id" >{{feature.name}}</mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </div>
+              </mat-card>
+             
+                
+          
+      <!-- Submit & Reset -->
+      <mat-card>
+        <div class="full-wrapper button-wrapper">
+          <div class="button-wrapper">
+            <button mat-flat-button color="warn">Submit</button>
+            <div><img style="float:right" width="70%" src="http://www.harvesting.co/assets/images/farmland.svg"></div>
+          </div>
+        </div>
+      </mat-card>
+    </form>
+  </div>

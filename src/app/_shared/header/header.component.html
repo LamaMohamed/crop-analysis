@@ -1,9 +1,11 @@
 <mat-toolbar color="primary" class="header">
-    <img class="logo" src="../assets/images/logo2.png">
-    <div>Crop analysis</div>
-    <!-- <span class="nav-tool-items">
-      <mat-icon>menu</mat-icon>
-    </span> -->
+    <img style="margin: 0;" class="logo" src="https://harvest.finance/static/media/tractor-new.1c34f435.svg">
+    <span><strong>Crop Analysis</strong></span>
+    <span class="nav-tool-items">
+    <mat-icon (click)="sidenav.toggle()" class="hamburger">menu</mat-icon>
+  </span>
     <a class="nav-item nav-link login"  style="color: white;" routerLink="/login">Login</a>
     <!-- <a class="nav-item nav-link login"  style="color: white;" > Logout</a> -->
   </mat-toolbar>
+
+  <app-sidenav></app-sidenav>

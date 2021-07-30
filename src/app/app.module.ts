@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule } from "@angular/forms";
+import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { AngularMaterialModule } from './material.module';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +12,8 @@ import { SignupComponent } from './_auth/signup/signup.component';
 import { HeaderComponent } from './_shared/header/header.component';
 import { AuthInterceptor } from './_auth/auth-interceptor';
 import { SidenavComponent } from './_shared/sidenav/sidenav.component';
+import { HarvestAddComponent } from './components/harvest-add/harvest-add.component';
+import { HarvestViewComponent } from './components/harvest-view/harvest-view.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { SidenavComponent } from './_shared/sidenav/sidenav.component';
     LoginComponent,
     SignupComponent,
     HeaderComponent,
-    SidenavComponent
+    SidenavComponent,
+    HarvestAddComponent,
+    HarvestViewComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,7 @@ import { SidenavComponent } from './_shared/sidenav/sidenav.component';
     HttpClientModule,
     AngularMaterialModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   bootstrap: [AppComponent],

@@ -5,6 +5,9 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const userRoutes = require("./routes/user");
+const harvestRoutes = require("./routes/harvest");
+const cropRoutes = require("./routes/crop");
+const cityRoutes = require("./routes/city");
 
 const app = express();
 app.use(cors());
@@ -14,7 +17,8 @@ mongoose
     "mongodb+srv://Lama:Lama1011@crop-analysis.temcm.mongodb.net/CropAnalysisDB",
       {
         useNewUrlParser: true,
-        useFindAndModify: false
+        useFindAndModify: false,
+        useUnifiedTopology:true
       }
   )
   .then(() => {
@@ -29,7 +33,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 // Setting up static directory
-app.use(express.static(path.join(__dirname, 'public')));
+/* app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public','index.html'));
+}); */
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -37,9 +43,9 @@ app.use(function(req, res, next) {
     next();
   });
 
-app.get('*', (req, res) => {
+/* app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public','index.html'));
-  });
+  }); */
   
   
   // error handler 
@@ -57,5 +63,8 @@ app.listen(port, () => {
 })
   
 app.use("/api/user", userRoutes);
+app.use("/api/harvest", harvestRoutes);
+app.use("/api/city", cityRoutes);
+app.use("/api/crop", cropRoutes);
 
 module.exports = app;
