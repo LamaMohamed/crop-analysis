@@ -39,8 +39,8 @@ Make sure you have [Node.js](http://nodejs.org/) installed.
 
 ### Preview 
 <p align="center">
-  <img src="./src/assets/images/1.png" width="350" title="hover text">
-  <img src="./src/assets/images/2.png" width="350" alt="accessibility text">
-  <img src="./src/assets/images/3.png" width="350" alt="accessibility text">
-  <img src="./src/assets/images/4.png" width="350" alt="accessibility text">
+  <img src="./src/assets/images/1.PNG" width="350" title="hover text">
+  <img src="./src/assets/images/2.PNG" width="350" alt="accessibility text">
+  <img src="./src/assets/images/3.PNG" width="350" alt="accessibility text">
+  <img src="./src/assets/images/4.PNG" width="350" alt="accessibility text">
 </p>
