@@ -35,3 +35,10 @@ Make sure you have [Node.js](http://nodejs.org/) installed.
 1. Install [Node.js](https://nodejs.org) and [MongoDB](https://www.mongodb.com)
 2. Install Angular CLI: `npm i -g @angular/cli`
 3. From project root folder install all the dependencies: `npm i`
+
+
+### Preview 
+![Image of website]<img src="./src/assets/images/1.png" width="800px" height="auto">
+<img src="./src/assets/images/2.png" width="800px" height="auto">
+<img src="./src/assets/images/3.png" width="800px" height="auto">
+<img src="./src/assets/images/4.png" width="800px" height="auto">
